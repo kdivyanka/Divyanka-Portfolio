@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaishankar Kumar - Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="cursor-glow"></div>
+    
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-brand">
+            <i class="fas fa-code animated-icon"></i>
+            <span>DK</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" data-section="hero">Home</a></li>
+            <li><a href="#about" data-section="about">About</a></li>
+            <li><a href="#skills" data-section="skills">Skills</a></li>
+            <li><a href="#editor" data-section="editor">Code Editor</a></li>
+            <li><a href="#projects" data-section="projects">Projects</a></li>
+            <li><a href="#education" data-section="education">Education</a></li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="DIVYANKA KUMARI">DIVYANKA KUMARI</h1>
+                <p class="hero-subtitle">Computer Science Student & Tech Enthusiast</p>
+                <p class="hero-description">Passionate about technology and problem-solving with real-world applications</p>
+                <div class="hero-buttons">
+                    <button class="glass-btn primary" onclick="scrollToSection('projects')">
+                        <i class="fas fa-rocket"></i>
+                        View Projects
+                    </button>
+                    <button class="glass-btn secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="code-snippet">
+                        <span class="code-line">const student = {</span>
+                        <span class="code-line">  name: "Divyanka",</span>
+                        <span class="code-line">  skills: ["Java", "C", "Python"],</span>
+                        <span class="code-line">  passion: "Problem Solving"</span>
+                        <span class="code-line">};</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card glass-card">
+                <div class="about-intro">
+                    <h3 class="about-title">Hello, I'm Divyanka!</h3>
+                    <p class="about-description">Computer Science student with a strong passion for technology and problem-solving. I aim to apply my skills to real-world challenges while continuously learning and growing in the tech industry.</p>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <span>Full Stack Development</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Innovation</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/divyanka-kumari-636a25294/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/kdivyanka" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-card" data-skill="java">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <div class="circular-progress" data-percentage="85">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">85%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card" data-skill="c">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C</h3>
+                    <div class="circular-progress" data-percentage="80">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card" data-skill="javascript">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="circular-progress" data-percentage="75">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">75%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card" data-skill="python">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="circular-progress" data-percentage="70">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">70%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card" data-skill="html">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS</h3>
+                    <div class="circular-progress" data-percentage="80">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card" data-skill="sql">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <div class="circular-progress" data-percentage="75">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="percentage-text">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Editor Section -->
+    <section id="editor" class="section">
+        <div class="container">
+            <h2 class="section-title">Interactive Code Editor</h2>
+            <div class="editor-container glass-card">
+                <div class="editor-header">
+                    <div class="editor-tabs">
+                        <button class="tab-btn active" data-lang="javascript">JavaScript</button>
+                        <button class="tab-btn" data-lang="java">Java</button>
+                        <button class="tab-btn" data-lang="python">Python</button>
+                        <button class="tab-btn" data-lang="html">HTML</button>
+                        <button class="tab-btn" data-lang="css">CSS</button>
+                        <button class="tab-btn" data-lang="c">C</button>
+                    </div>
+                    <div class="editor-controls">
+                        <button class="control-btn" id="runCode">
+                            <i class="fas fa-play"></i>
+                            Run
+                        </button>
+                        <button class="control-btn" id="clearCode">
+                            <i class="fas fa-trash"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-body">
+                    <div class="code-input">
+                        <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+                    </div>
+                    <div class="code-output">
+                        <div class="output-header">
+                            <i class="fas fa-terminal"></i>
+                            Output
+                        </div>
+                        <div id="output" class="output-content">Ready to execute code...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-gas-pump"></i>
+                        <h3>Smart Petrol Pump Locator</h3>
+                    </div>
+                    <p>Design and Development of Smart Petrol Pump Locator and Fuel Requirement Planner (Ongoing)</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Web Dev</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Grocery Shopping App</h3>
+                    </div>
+                    <p>Developed an e-commerce web application for grocery shopping with modern UI</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telephone Directory System</h3>
+                    </div>
+                    <p>Built a C console app for managing a digital phone directory using file handling</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">File Handling</span>
+                        <span class="tech-tag">DSA</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-university"></i>
+                        <h3>Banking System</h3>
+                    </div>
+                    <p>Built with Java Servlets, JDBC, and MySQL for robust backend functionality</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JDBC</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-grid">
+                <div class="education-card glass-card">
+                    <div class="education-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>B.E - Computer Science Engineering</h3>
+                    </div>
+                    <p class="institution">SDMCET, Dharwad</p>
+                    <p class="year">2027 | CGPA: 8.9</p>
+                </div>
+                
+                <div class="education-card glass-card">
+                    <div class="education-header">
+                        <i class="fas fa-school"></i>
+                        <h3>12th Grade</h3>
+                    </div>
+                    <p class="institution">Kendriya Vidyalaya No. 1 Rajnagar</p>
+                    <p class="year">2022 | 83.4%</p>
+                </div>
+                
+                <div class="education-card glass-card">
+                    <div class="education-header">
+                        <i class="fas fa-school"></i>
+                        <h3>10th Grade</h3>
+                    </div>
+                    <p class="institution">Kendriya Vidyalaya No. 2 Hubli</p>
+                    <p class="year">2020 | 87.6%</p>
+                </div>
+                
+                <div class="education-card glass-card">
+                    <div class="education-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Certifications</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li>Foundations of Cybersecurity</li>
+                        <li>Python Workshop - GDSC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content glass-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>divyanka052@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7892392107</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
