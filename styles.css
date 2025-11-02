@@ -33,7 +33,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   color: var(--text-primary);
   overflow-x: hidden;
@@ -193,16 +193,29 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--text-secondary);
   margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-buttons {
@@ -509,9 +522,11 @@ body {
 }
 
 .project-card p {
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
 
 .project-tech {
@@ -561,9 +576,11 @@ body {
 }
 
 .institution {
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 10px;
+  letter-spacing: 0.3px;
 }
 
 .year {
@@ -654,16 +671,20 @@ body {
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 1px;
 }
 
 .about-description {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .about-highlights {
@@ -766,6 +787,15 @@ body {
   40% { transform: translateX(2px); }
   60% { transform: translateX(-2px); }
   80% { transform: translateX(2px); }
+}
+
+@keyframes glow {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(99, 102, 241, 0.3));
+  }
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(99, 102, 241, 0.6));
+  }
 }
 
 /* Responsive Design */
