@@ -116,12 +116,19 @@ class SkillsAnimator {
         const circumference = 2 * Math.PI * 52;
         const offset = circumference - (percentage / 100) * circumference;
         
-        circle.style.strokeDashoffset = offset;
-        circle.style.stroke = 'var(--primary-color)';
+        // Smooth animation with delay
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+                circle.style.stroke = 'var(--primary-color)';
+            }, 300);
+        });
         
         // Animate percentage counter
         const percentageText = progress.querySelector('.percentage-text');
-        this.animateCounter(percentageText, 0, percentage, 2000);
+        setTimeout(() => {
+            this.animateCounter(percentageText, 0, percentage, 3000);
+        }, 500);
     }
 
     animateCounter(element, start, end, duration) {
@@ -130,7 +137,10 @@ class SkillsAnimator {
         const animate = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            const current = Math.floor(start + (end - start) * progress);
+            
+            // Smoother easing function
+            const easeOutQuint = 1 - Math.pow(1 - progress, 5);
+            const current = Math.floor(start + (end - start) * easeOutQuint);
             
             element.textContent = current + '%';
             
