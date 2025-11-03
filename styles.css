@@ -189,7 +189,7 @@ body {
 
 .glitch {
   position: relative;
-  animation: glitch 3s infinite;
+  animation: glitch 8s infinite;
 }
 
 .hero-subtitle {
@@ -782,11 +782,12 @@ body {
 }
 
 @keyframes glitch {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-2px); }
-  40% { transform: translateX(2px); }
-  60% { transform: translateX(-2px); }
-  80% { transform: translateX(2px); }
+  0%, 95% { transform: translateX(0); }
+  96% { transform: translateX(-0.5px); }
+  97% { transform: translateX(0.5px); }
+  98% { transform: translateX(-0.5px); }
+  99% { transform: translateX(0); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes glow {
